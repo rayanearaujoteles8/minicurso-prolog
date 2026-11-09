@@ -958,9 +958,9 @@ strong{font-weight:700}
       <div class="swish-grid">
         <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><p class="swish-empty">Deixe o editor vazio neste exemplo.</p></div>
         <div class="swish-side">
-          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>Ola, turma!</code></li><li><code>true.</code></li></ul></div>
+          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>Hello, world!</code></li><li><code>true.</code></li></ul></div>
           <div class="swish-query"><div class="swish-label">2 · Consulta</div>
-            <div class="swish-input"><span aria-hidden="true">?-</span><code>writeln(&#x27;Ola, turma!&#x27;).</code></div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><code>writeln(&#x27;Hello, world!&#x27;).</code></div>
             <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
           </div>
         </div>
@@ -1706,6 +1706,32 @@ strong{font-weight:700}
   </section>
 
   <!-- ============ 11 · DESAFIO ============ -->
+  <section class="slide" data-titulo="Repita uma ação três vezes">
+    <div class="slide__interior revela slide-com-swish">
+      <div class="topo">
+        <span class="topo__n">Seção 10</span>
+        <h2 class="topo__t" data-parte="letras">Repita uma ação três vezes</h2>
+        <span class="topo__quem">Repetição</span>
+      </div>
+      <div class="duas">
+        <div><p class="frase">Vamos mostrar <em>1, 2 e 3</em>, um número por linha.</p><p class="suave"><code>between(1, 3, Numero)</code> fornece os números de 1 a 3. <code>forall</code> faz a mesma ação para cada número: <code>writeln(Numero)</code>. Para praticar, troque o 3 por 5.</p></div>
+        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
+      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
+      <div class="swish-grid">
+        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><p class="swish-empty">Deixe o editor vazio neste exemplo.</p></div>
+        <div class="swish-side">
+          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>1</code></li><li><code>2</code></li><li><code>3</code></li><li><code>true.</code></li></ul></div>
+          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><code>forall(between(1, 3, Numero),
+       writeln(Numero)).</code></div>
+            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
+          </div>
+        </div>
+      </div>
+    </figure></div>
+      </div>
+    </div>
+  </section>
   <section class="slide" data-titulo="Travou? Teste uma coisa por vez">
     <div class="slide__interior revela">
       <div class="topo">
