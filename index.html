@@ -557,6 +557,17 @@ strong{font-weight:700}
 .operadores__pratica th { color: var(--fita); }
 .operadores td code { display: inline-block; padding-inline: .13rem; white-space: nowrap; }
 </style>
+<style>
+.presenca { display: grid; justify-items: center; text-align: center; }
+.presenca h3 { margin: 0 0 .65rem; }
+.presenca__qr {
+  display: grid; place-content: center; width: min(100%, 15rem);
+  aspect-ratio: 1; border: 2px dashed var(--carbono-fraco);
+  background: var(--papel-alto); padding: .75rem;
+  font-size: .95rem; color: var(--carbono);
+}
+.presenca__qr img { display: block; width: 100%; height: auto; }
+</style>
 </head>
 <body>
 <script>
@@ -1854,12 +1865,19 @@ strong{font-weight:700}
         <span class="topo__n">Referências</span>
         <h2 class="topo__t" data-parte="letras">Para continuar estudando</h2>
       </div>
+      <div class="duas"><div>
       <p class="frase" style="max-width:34ch">Documentação e ambiente de prática do <em>SWI-Prolog</em>.</p>
       <ul class="fontes">
         <li>Documentação oficial do SWI-Prolog · <a href="https://www.swi-prolog.org/Documentation.html" target="_blank" rel="noopener">swi-prolog.org/Documentation.html</a></li>
         <li>SWISH, Prolog no navegador · <a href="https://swish.swi-prolog.org/" target="_blank" rel="noopener">swish.swi-prolog.org</a></li>
         <li><em>Learn Prolog Now!</em>, curso online gratuito · <a href="https://lpn.swi-prolog.org/" target="_blank" rel="noopener">lpn.swi-prolog.org</a></li>
       </ul>
+        </div>
+        <aside class="presenca" aria-label="Espaço reservado para o QR code de presença">
+          <h3>Lista de presença</h3>
+          <div class="presenca__qr" id="qr-presenca">QR code de presença<br>Espaço reservado</div>
+        </aside>
+      </div>
     </div>
   </section>
 
