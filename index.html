@@ -889,30 +889,28 @@ strong{font-weight:700}
     </div>
   </section>
 
-  <section class="slide" data-titulo="Fatos, regras e perguntas">
-    <div class="slide__interior revela">
+  <section class="slide" data-titulo="Fatos, regras e consultas">
+    <div class="slide__interior revela slide-com-swish">
       <div class="topo">
         <span class="topo__n">Seção 04</span>
-        <h2 class="topo__t" data-parte="letras">Fatos, regras e perguntas</h2>
-        <span class="topo__quem">Como funciona</span>
+        <h2 class="topo__t" data-parte="letras">Fatos, regras e consultas</h2>
+        <span class="topo__quem">Estrutura e exemplo</span>
       </div>
-      <p class="frase" style="max-width:34ch">Em Prolog, descrevemos <em>relações</em> e fazemos consultas sobre elas.</p>
-      <div class="tres">
-        <div class="conceito">
-          <span class="conceito__rotulo">Fatos</span>
-          <p class="conceito__t">Registram informações</p>
-          <p class="conceito__d">Algo que é verdade, sem condição.</p>
+      <div class="duas">
+        <div><p class="frase"><em>Fato</em> registra. <em>Regra</em> diz quando vale. <em>Consulta</em> pergunta.</p><p class="suave">Leia <code>:-</code> como “se”. No exemplo, Ana é fã de pizza se gosta de pizza. A consulta pergunta se Ana é fã. <code>Pessoa</code> começa com maiúscula e é uma variável. <code>ana</code> e <code>pizza</code> são átomos, escritos aqui com minúscula. O ponto encerra cada fato, regra ou consulta.</p></div>
+        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
+      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
+      <div class="swish-grid">
+        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>% Fato</code></li><li><code>gosta(ana, pizza).</code></li><li><code> </code></li><li><code>% Regra</code></li><li><code>fa_de_pizza(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza).</code></li></ol></div>
+        <div class="swish-side">
+          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>true.</code></li></ul></div>
+          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><code>fa_de_pizza(ana).</code></div>
+            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
+          </div>
         </div>
-        <div class="conceito">
-          <span class="conceito__rotulo">Regras</span>
-          <p class="conceito__t">Descrevem relações deduzidas</p>
-          <p class="conceito__d">Algo que é verdade <strong>se</strong> outras coisas forem.</p>
-        </div>
-        <div class="conceito">
-          <span class="conceito__rotulo">Consultas</span>
-          <p class="conceito__t">Fazem perguntas à base</p>
-          <p class="conceito__d">O Prolog tenta provar a pergunta usando fatos e regras.</p>
-        </div>
+      </div>
+    </figure></div>
       </div>
     </div>
   </section>
@@ -1117,7 +1115,7 @@ strong{font-weight:700}
         <span class="topo__quem">Demonstração</span>
       </div>
       <div class="duas">
-        <div><p class="frase">Deixe os fatos no editor. Na pergunta, <code>Quem</code> é o nome que o Prolog deve descobrir.</p><p class="suave"></p></div>
+        <div><p class="frase">Compare <code>gosta(ana, pizza).</code> com <code>gosta(Quem, pizza).</code> <code>ana</code> e <code>pizza</code> são átomos escritos com minúscula. <code>Quem</code> é uma variável: começa com maiúscula e o Prolog procura um nome para preenchê-la.</p><p class="suave"></p></div>
         <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
       <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
       <div class="swish-grid">
