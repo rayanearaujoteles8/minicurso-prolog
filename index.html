@@ -548,6 +548,15 @@ strong{font-weight:700}
   background: var(--papel-alto);
 }
 </style>
+<style>
+.operadores__legenda { margin: 0 0 .5rem; }
+.operadores__quadro { overflow-x: auto; }
+.operadores { width: 100%; border-collapse: collapse; font-size: clamp(.75rem, 1.35vw, 1.05rem); line-height: 1.25; }
+.operadores th, .operadores td { border-bottom: 1px solid var(--carbono-fraco); padding: .28rem .45rem; text-align: left; }
+.operadores thead { color: var(--papel-alto); background: var(--tinta); }
+.operadores__pratica th { color: var(--fita); }
+.operadores td code { display: inline-block; padding-inline: .13rem; white-space: nowrap; }
+</style>
 </head>
 <body>
 <script>
@@ -1444,6 +1453,18 @@ strong{font-weight:700}
   </section>
 
   <!-- ============ 9 · CÁLCULOS ============ -->
+  <section class="slide" data-titulo="Guia de comandos e operadores">
+    <div class="slide__interior revela">
+      <div class="topo"><span class="topo__n">Referência</span>
+        <h2 class="topo__t" data-parte="letras">Guia de comandos e operadores</h2>
+      </div>
+      <p class="suave operadores__legenda">O destaque indica os temas praticados no minicurso.</p>
+      <div class="operadores__quadro"><table class="operadores">
+        <thead><tr><th scope="col">Conteúdo</th><th scope="col">Para que serve</th><th scope="col">Comando, operador ou técnica</th></tr></thead>
+        <tbody><tr class=operadores__pratica><th scope="row">Operações matemáticas</th><td>Realizar cálculos</td><td><code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>//</code> <code>mod</code> <code>rem</code> <code>**</code></td></tr><tr class=operadores__pratica><th scope="row">Avaliação aritmética</th><td>Calcular uma expressão</td><td><code>is</code></td></tr><tr class=operadores__pratica><th scope="row">Comparação numérica</th><td>Comparar valores</td><td><code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>=&lt;</code> <code>=:=</code> <code>=\=</code></td></tr><tr><th scope="row">Unificação</th><td>Fazer termos corresponderem</td><td><code>=</code></td></tr><tr><th scope="row">Não unificação</th><td>Verificar se os termos não podem corresponder</td><td><code>\=</code></td></tr><tr class=operadores__pratica><th scope="row">Condicionais</th><td>Escolher entre dois caminhos</td><td><code>-&gt;</code> <code>;</code></td></tr><tr class=operadores__pratica><th scope="row">Conjunção</th><td>Exigir que as duas condições sejam satisfeitas</td><td><code>,</code></td></tr><tr><th scope="row">Negação por falha</th><td>Ter sucesso quando a condição falha</td><td><code>\+</code></td></tr><tr><th scope="row">Corte</th><td>Limitar a busca por alternativas</td><td><code>!</code></td></tr><tr class=operadores__pratica><th scope="row">Repetição</th><td>Executar uma ação para cada valor</td><td><code>forall/2</code> <code>recursividade</code></td></tr><tr><th scope="row">Condição de parada</th><td>Encerrar uma chamada recursiva</td><td><code>caso-base</code></td></tr></tbody>
+      </table></div>
+    </div>
+  </section>
   <section class="slide" data-titulo="Some os preços">
     <div class="slide__interior revela slide-com-swish">
       <div class="topo">
