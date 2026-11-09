@@ -726,13 +726,13 @@ strong{font-weight:700}
         <li class="marco"><span class="marco__ano">01</span><span class="marco__o"><b>Programação.</b> Ensinar o computador a fazer tarefas</span></li>
         <li class="marco"><span class="marco__ano">02</span><span class="marco__o"><b>Algoritmos.</b> Passos em ordem</span></li>
         <li class="marco"><span class="marco__ano">03</span><span class="marco__o"><b>Linguagens.</b> Como conversamos com a máquina</span></li>
-        <li class="marco"><span class="marco__ano">04</span><span class="marco__o"><b>Prolog.</b> Uma linguagem baseada em lógica</span></li>
-        <li class="marco"><span class="marco__ano">05</span><span class="marco__o"><b>Ambiente.</b> SWISH e o primeiro código</span></li>
-        <li class="marco"><span class="marco__ano">06</span><span class="marco__o"><b>Sintaxe.</b> Fatos, consultas e variáveis</span></li>
-        <li class="marco"><span class="marco__ano">07</span><span class="marco__o"><b>Regras.</b> Conjunção e várias respostas</span></li>
-        <li class="marco"><span class="marco__ano">08</span><span class="marco__o"><b>Dados.</b> Átomos, números e listas</span></li>
+        <li class="marco"><span class="marco__ano">04</span><span class="marco__o"><b>Prolog.</b> Introdução e história</span></li>
+        <li class="marco"><span class="marco__ano">05</span><span class="marco__o"><b>Conceitos básicos.</b> Átomos, variáveis e sintaxe</span></li>
+        <li class="marco"><span class="marco__ano">06</span><span class="marco__o"><b>Primeiros testes.</b> SWISH, fatos e consultas</span></li>
+        <li class="marco"><span class="marco__ano">07</span><span class="marco__o"><b>Regras.</b> Uma condição, duas condições e várias respostas</span></li>
+        <li class="marco"><span class="marco__ano">08</span><span class="marco__o"><b>Listas.</b> Conferir itens de um pedido</span></li>
         <li class="marco"><span class="marco__ano">09</span><span class="marco__o"><b>Cálculos.</b> Aritmética e comparações</span></li>
-        <li class="marco"><span class="marco__ano">10</span><span class="marco__o"><b>Prática.</b> Encontrar todos os pedidos de pizza</span></li>
+        <li class="marco"><span class="marco__ano">10</span><span class="marco__o"><b>Prática.</b> Filtrar pedidos e repetir uma ação</span></li>
         <li class="marco"><span class="marco__ano marco__ano--chave">11</span><span class="marco__o"><b>Desafio.</b> Uma base de conhecimento completa</span></li>
       </ol>
     </div>
@@ -889,23 +889,38 @@ strong{font-weight:700}
     </div>
   </section>
 
-  <section class="slide" data-titulo="Fatos, regras e consultas">
-    <div class="slide__interior revela slide-com-swish">
+  <section class="slide" data-titulo="Átomos e variáveis">
+    <div class="slide__interior revela">
       <div class="topo">
-        <span class="topo__n">Seção 04</span>
-        <h2 class="topo__t" data-parte="letras">Fatos, regras e consultas</h2>
-        <span class="topo__quem">Estrutura e exemplo</span>
+        <span class="topo__n">Conceitos básicos</span>
+        <h2 class="topo__t" data-parte="letras">Átomos e variáveis</h2>
+        <span class="topo__quem">Antes de programar</span>
       </div>
       <div class="duas">
-        <div><p class="frase"><em>Fato</em> registra. <em>Regra</em> diz quando vale. <em>Consulta</em> pergunta.</p><p class="suave">Leia <code>:-</code> como “se”. No exemplo, Ana é fã de pizza se gosta de pizza. A consulta pergunta se Ana é fã. <code>Pessoa</code> começa com maiúscula e é uma variável. <code>ana</code> e <code>pizza</code> são átomos, escritos aqui com minúscula. O ponto encerra cada fato, regra ou consulta.</p></div>
+        <div><p class="frase">Um átomo dá nome a algo. Uma variável representa um valor que o Prolog pode descobrir.</p><p class="suave">Nos exemplos, os átomos começam com minúscula. As variáveis <code>Pessoa</code> e <code>Quem</code> começam com maiúscula. Na consulta, <code>Quem</code> pode receber um nome como <code>ana</code>.</p></div>
+        <div><div class="atividade"><span class="carimbo">Compare os nomes</span><p><strong>Átomos</strong><br><code>ana</code>, <code>pizza</code><br><br><strong>Variáveis</strong><br><code>Pessoa</code>, <code>Quem</code></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · AMBIENTE ============ -->
+  <section class="slide" data-titulo="Sintaxe básica do Prolog">
+    <div class="slide__interior revela slide-com-swish">
+      <div class="topo">
+        <span class="topo__n">Conceitos básicos</span>
+        <h2 class="topo__t" data-parte="letras">Sintaxe básica do Prolog</h2>
+        <span class="topo__quem">Como ler o código</span>
+      </div>
+      <div class="duas">
+        <div><p class="frase">Leia <code>gosta(ana, pizza).</code> como “Ana gosta de pizza”.</p><p class="suave">Os parênteses guardam os itens da relação. A vírgula separa esses itens. O ponto encerra o fato, a regra ou a consulta. O <code>%</code> inicia um comentário até o fim da linha.</p></div>
         <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
       <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
       <div class="swish-grid">
-        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>% Fato</code></li><li><code>gosta(ana, pizza).</code></li><li><code> </code></li><li><code>% Regra</code></li><li><code>fa_de_pizza(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza).</code></li></ol></div>
+        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>% Ana gosta de pizza.</code></li><li><code>gosta(ana, pizza).</code></li></ol></div>
         <div class="swish-side">
-          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>true.</code></li></ul></div>
+          <div class="swish-output swish-owl"><div class="swish-label">3 · Resultado</div><p class="swish-empty">As respostas aparecem aqui depois de executar.</p></div>
           <div class="swish-query"><div class="swish-label">2 · Consulta</div>
-            <div class="swish-input"><span aria-hidden="true">?-</span><code>fa_de_pizza(ana).</code></div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><span class="swish-empty">Sua pergunta vai aqui.</span></div>
             <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
           </div>
         </div>
@@ -914,8 +929,6 @@ strong{font-weight:700}
       </div>
     </div>
   </section>
-
-  <!-- ============ 5 · AMBIENTE ============ -->
   <section class="slide" data-titulo="Onde digitar no SWISH?">
     <div class="slide__interior revela slide-com-swish">
       <div class="topo">
@@ -1009,37 +1022,7 @@ strong{font-weight:700}
   </section>
 
   <!-- ============ 6 · SINTAXE ============ -->
-  <section class="slide" data-titulo="Comentários e pontuação">
-    <div class="slide__interior revela slide-com-swish">
-      <div class="topo">
-        <span class="topo__n">Seção 06</span>
-        <h2 class="topo__t" data-parte="letras">Comentários e pontuação</h2>
-        <span class="topo__quem">Sintaxe</span>
-      </div>
-      <div class="duas">
-        <div>
-          <p class="frase">Comentários <em>explicam</em> o código. O ponto encerra cada frase.</p>
-          <p class="suave">Em Prolog, <span class="termo">%</span> inicia um comentário de linha: o resto da linha é ignorado.</p>
-        </div>
-        <div>
-          <figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
-      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
-      <div class="swish-grid">
-        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>% Uma mensagem de saudação</code></li></ol></div>
-        <div class="swish-side">
-          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>Olá!</code></li><li><code>true.</code></li></ul></div>
-          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
-            <div class="swish-input"><span aria-hidden="true">?-</span><code>writeln(&#x27;Olá!&#x27;).</code></div>
-            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
-          </div>
-        </div>
-      </div>
-    </figure>
-          <p class="nota-pe">Fatos, regras e consultas <b>terminam com ponto</b>.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <section class="slide" data-titulo="Cadastre um gosto e teste">
     <div class="slide__interior revela slide-com-swish">
@@ -1240,6 +1223,56 @@ strong{font-weight:700}
     </div>
   </section>
 
+  <section class="slide" data-titulo="Para o combo, as duas condições valem">
+    <div class="slide__interior revela slide-com-swish">
+      <div class="topo">
+        <span class="topo__n">Seção 07</span>
+        <h2 class="topo__t" data-parte="letras">Para o combo, as duas condições valem</h2>
+        <span class="topo__quem">Demonstração</span>
+      </div>
+      <div class="duas">
+        <div><p class="frase">Para gostar do combo, a pessoa precisa gostar de <em>pizza e suco</em>.</p><p class="suave">A vírgula entre as condições significa “e”. Acrescente os fatos e a regra em um editor limpo.</p></div>
+        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
+      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
+      <div class="swish-grid">
+        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>gosta(ana, pizza).</code></li><li><code>gosta(ana, suco).</code></li><li><code> </code></li><li><code>combo(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza),</code></li><li><code>    gosta(Pessoa, suco).</code></li></ol></div>
+        <div class="swish-side">
+          <div class="swish-output swish-owl"><div class="swish-label">3 · Resultado</div><p class="swish-empty">As respostas aparecem aqui depois de executar.</p></div>
+          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><span class="swish-empty">Sua pergunta vai aqui.</span></div>
+            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
+          </div>
+        </div>
+      </div>
+    </figure></div>
+      </div>
+    </div>
+  </section>
+  <section class="slide" data-titulo="Teste a regra do combo">
+    <div class="slide__interior revela slide-com-swish">
+      <div class="topo">
+        <span class="topo__n">Seção 07</span>
+        <h2 class="topo__t" data-parte="letras">Teste a regra do combo</h2>
+        <span class="topo__quem">Demonstração</span>
+      </div>
+      <div class="duas">
+        <div><p class="frase">O Prolog confere as duas condições para <em>a mesma pessoa</em>.</p><p class="suave">Com os fatos do slide anterior, o Prolog confirma que Ana gosta do combo.</p></div>
+        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
+      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
+      <div class="swish-grid">
+        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>gosta(ana, pizza).</code></li><li><code>gosta(ana, suco).</code></li><li><code> </code></li><li><code>combo(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza),</code></li><li><code>    gosta(Pessoa, suco).</code></li></ol></div>
+        <div class="swish-side">
+          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>true.</code></li></ul></div>
+          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
+            <div class="swish-input"><span aria-hidden="true">?-</span><code>combo(ana).</code></div>
+            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
+          </div>
+        </div>
+      </div>
+    </figure></div>
+      </div>
+    </div>
+  </section>
   <section class="slide" data-titulo="Quem mais gosta de pizza?">
     <div class="slide__interior revela">
       <div class="topo">
@@ -1587,56 +1620,8 @@ strong{font-weight:700}
       </div>
     </div>
   </section>
-  <section class="slide" data-titulo="Para o combo, as duas condições valem">
-    <div class="slide__interior revela slide-com-swish">
-      <div class="topo">
-        <span class="topo__n">Seção 10</span>
-        <h2 class="topo__t" data-parte="letras">Para o combo, as duas condições valem</h2>
-        <span class="topo__quem">Demonstração</span>
-      </div>
-      <div class="duas">
-        <div><p class="frase">Para gostar do combo, a pessoa precisa gostar de <em>pizza e suco</em>.</p><p class="suave">A vírgula entre as condições significa “e”. Acrescente os fatos e a regra em um editor limpo.</p></div>
-        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
-      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
-      <div class="swish-grid">
-        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>gosta(ana, pizza).</code></li><li><code>gosta(ana, suco).</code></li><li><code> </code></li><li><code>combo(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza),</code></li><li><code>    gosta(Pessoa, suco).</code></li></ol></div>
-        <div class="swish-side">
-          <div class="swish-output swish-owl"><div class="swish-label">3 · Resultado</div><p class="swish-empty">As respostas aparecem aqui depois de executar.</p></div>
-          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
-            <div class="swish-input"><span aria-hidden="true">?-</span><span class="swish-empty">Sua pergunta vai aqui.</span></div>
-            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
-          </div>
-        </div>
-      </div>
-    </figure></div>
-      </div>
-    </div>
-  </section>
-  <section class="slide" data-titulo="Teste a regra do combo">
-    <div class="slide__interior revela slide-com-swish">
-      <div class="topo">
-        <span class="topo__n">Seção 10</span>
-        <h2 class="topo__t" data-parte="letras">Teste a regra do combo</h2>
-        <span class="topo__quem">Demonstração</span>
-      </div>
-      <div class="duas">
-        <div><p class="frase">O Prolog confere as duas condições para <em>a mesma pessoa</em>.</p><p class="suave">Com os fatos do slide anterior, o Prolog confirma que Ana gosta do combo.</p></div>
-        <div><figure class="swish-demo" aria-label="Simulação visual da tela do SWISH">
-      <figcaption><strong><span class="swish-logo" aria-hidden="true"></span><span>SWI<span class="swish-red">SH</span></span></strong><span class="swish-menu" aria-hidden="true">File ▾　Edit ▾　Examples ▾　Help ▾</span><span class="swish-caption">Simulação</span></figcaption>
-      <div class="swish-grid">
-        <div class="swish-editor"><div class="swish-label">Program <span class="swish-plus" aria-hidden="true">+</span><small>Editor</small></div><ol class="swish-lines"><li><code>gosta(ana, pizza).</code></li><li><code>gosta(ana, suco).</code></li><li><code> </code></li><li><code>combo(Pessoa) :-</code></li><li><code>    gosta(Pessoa, pizza),</code></li><li><code>    gosta(Pessoa, suco).</code></li></ol></div>
-        <div class="swish-side">
-          <div class="swish-output swish-has-answer"><div class="swish-label">3 · Resultado</div><ul class="swish-results"><li><code>true.</code></li></ul></div>
-          <div class="swish-query"><div class="swish-label">2 · Consulta</div>
-            <div class="swish-input"><span aria-hidden="true">?-</span><code>combo(ana).</code></div>
-            <div class="swish-tools"><span class="swish-tool" aria-hidden="true">Examples ▴</span><span class="swish-tool" aria-hidden="true">History ▴</span><span class="swish-tool" aria-hidden="true">Solutions ▴</span><span class="swish-run">Run!</span></div>
-          </div>
-        </div>
-      </div>
-    </figure></div>
-      </div>
-    </div>
-  </section>
+  
+  
   <section class="slide" data-titulo="Filtre os pedidos">
     <div class="slide__interior revela slide-com-swish">
       <div class="topo">
